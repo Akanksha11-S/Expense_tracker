@@ -87,9 +87,3 @@ All `/api/expenses` routes require the header `Authorization: Bearer <token>`.
 | DELETE | `/api/expenses/:id` | Delete an expense                                   |
 
 Validation errors return `400` with `{ message, errors: { field: "reason" } }`.
-
-## Notes
-
-- The category list lives in `backend/models/Expense.js` and `frontend/src/utils/categories.js`. Change both together.
-- The token is stored in `localStorage`. For a hardened production setup, consider httpOnly cookies.
-- Login and sign-up endpoints are rate limited.
